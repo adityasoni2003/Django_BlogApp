@@ -36,10 +36,14 @@ nav ul li{
     position: relative;
     
 }
-nav ul li:hover{
+a{
+    color: aliceblue;
+}
+
+nav ul li:hover ,nav ul li>a:hover{
     cursor: pointer;
 }
-nav ul li:hover::after{
+nav ul li:hover::after,nav ul li a:hover::after{
     position: absolute;
     top: 100%;
     left: 0;

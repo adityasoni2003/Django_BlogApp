@@ -5,6 +5,10 @@
     <h1>{{post.title}}</h1>
     <h4>{{post.author}}</h4>
     <p>{{post.body}}</p>
+    <p><a href="{% url 'post_edit' post.pk %}">Edit Blog</a></p>
+    <p><a href="{% url 'post_delete' post.pk %}">Delete Blog</a></p>
+    
+    
 </div>
 
 
