@@ -15,9 +15,17 @@
         <ul>
             <li><a href="{% url 'post_new' %}" >Add Post</a></li>
             <li>Contact Us</li>
-            <li>Our Services</li>
         </ul>
     </nav>
+    {% if user.is_authenticated %}
+     <p>Hi {{user.username}}</p>
+     <a href="{% url 'logout' %}">Logout</a>
+
+    {% else %}
+        <p>Please Login to view blogs</p>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">Signup</a>
+    {% endif %}
 
     <div class="posts">
         {% block content  %}
